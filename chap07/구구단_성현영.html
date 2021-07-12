@@ -1,0 +1,19 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+  <ul v-for="j in 3">
+    <li v-for="i in 9" :style="{listStyle: 'none'}">
+      <span v-for="k in 3" v-if="j == 1"> 
+	  {{j+k}} * {{i}} = {{(j+k)*i<10?"0"+i*(j+k):i*(j+k)}}&nbsp&nbsp
+	  </span>
+      <span v-for="k in 3" v-if="j == 2"> 
+	  {{j+(k+2)}} * {{i}} = {{(j+(k+2))*i<10?"0"+i*(j+(k+2)):i*(j+(k+2))}}&nbsp&nbsp</span>
+      <span v-for="k in 2" v-if="j == 3"> 
+	  {{j+(k+4)}} * {{i}} = {{(j+(k+4))*i<10?"0"+i*(j+(k+4)):i*(j+(k+4))}}&nbsp&nbsp</span>
+    </li>
+  </ul>
+</div>
+<script>
+  var app = new Vue ({
+    el: "#app"
+  });
+</script>

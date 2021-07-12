@@ -1,0 +1,13 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+  <ul :style="{listStyle:'none'}">
+    <li v-for="i in 9">
+      <span v-for="j in 8">{{(j+1)}}*{{i}}={{(j+1)*i}}/</span>
+    </li>
+  </ul>
+</div>
+<script>
+  var app = new Vue({
+    el: "#app"
+  });
+</script>

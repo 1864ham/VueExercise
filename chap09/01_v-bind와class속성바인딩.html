@@ -1,0 +1,18 @@
+<script src="https://unpkg.com/vue"></script>
+
+<style media="screen">
+  div.active {border: solid 1px blue;width: 300px;height: 150px;}
+  div.text-danger {color: red;}
+</style>
+
+<div id="app">
+  <div class="static" v-bind:class="classObject">active class 적용!</div>
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    // data: { isActive: true, hasError: true}
+    data: { classObject : {active: true, 'text-danger': true}}
+  });
+</script>

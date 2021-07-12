@@ -1,0 +1,13 @@
+<script src="https://unpkg.com/vue"></script>
+<div id="app">
+      <span v-if="score>60">시험 통과입니다</span>
+      <span v-else-if="score !=number">숫자를 입력하세요 메롱ㅋㅋ</span>
+      <span v-else>시험 낙제입니다(장난하나ㅋㅋ)</span>
+</div>
+<script>
+  var input = parseInt(prompt('점수를 입력하세요'));
+  var app = new Vue({
+    el: "#app",
+    data: {score:input}
+  });
+</script>
